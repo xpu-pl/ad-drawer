@@ -13,7 +13,7 @@ Use this format. You can add more rel attributes or other target. You can also a
       {
          "link":"https://examplepage.com",
          "images":{
-            "wide skyscraper":"https://examplepage.com/wide-cokolwiek.png",
+            "wide skyscraper":"https://examplepage.com/ad.png",
          },
          "configuration":{
             "rel":[
@@ -34,7 +34,7 @@ Use this format. You can add more rel attributes or other target. You can also a
 
 The draw function is used to add an ad. Specify the type and id of the item to be added.
 
-> let adDrawer= new AdDrawer('./payload.json'); 
+> let adDrawer= new AdDrawer('./payload.json', 'extra-class-to-image'); 
 
 >  adDrawer.draw("large rectangle","ad");
 

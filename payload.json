@@ -1,13 +1,14 @@
 {
    "banners":[
       {
-         "link":"https://przeksztalcenia.pro/",
+         "link":"https://examplepage.pro/",
          "images":{
-            "wide skyscraper":"https://przeksztalcenia.pro/wide-cokolwiek.png",
-            "leaderboard":"https://przeksztalcenia.pro/leader-cokolwiek2.png",
-            "large rectangle":"https://przeksztalcenia.pro/large-cokolwiek.webp"
+            "wide skyscraper":"https://examplepage.pro/wide-cokolwiek.png",
+            "leaderboard":"https://examplepage.pro/leader-cokolwiek2.png",
+            "large rectangle":"https://examplepage.pro/large-cokolwiek.webp"
          },
          "configuration":{
+            "description": "Company fighting for fair verdicts",
             "rel":[
                "nofollow",
                "noindex"
@@ -21,13 +22,14 @@
          ]
       },
       {
-         "link":"https://bezproblemow.pl/",
+         "link":"https://examplepage.pl/",
          "images":{
             "wide skyscraper":"https://pixabay.com/wide-cokolwiek.png",
-            "mobile banner":"https://images.bezproblemow.pl/mobile-cokolwiek.jpg",
+            "mobile banner":"https://images.examplepage.pl/mobile-cokolwiek.jpg",
             "leaderboard":"https://pixabay.com/leader-cokolwiek.jpg"
          },
          "configuration":{
+            "description": "Real estate company from Poland",
             "rel":[
                "opener"
             ],
@@ -41,14 +43,15 @@
          ]
       },
       {
-         "link":"https://majkesz.pl/",
+         "link":"https://examplepage.com/",
          "images":{
-            "mobile banner":"https://majkesz.pl/grafika.jpg",
-            "leaderboard": "https://majkesz.pl/leader-grafika.png",
+            "mobile banner":"https://examplepage.com/grafika.jpg",
+            "leaderboard": "https://examplepage.com/leader-grafika.png",
             "wide skyscraper" : "https://media.istockphoto.com/id/1406114828/pl/zdj%C4%99cie/budynek-wie%C5%BCowca-mieszkanie-wie%C5%BCe-biurowe.jpg?s=2048x2048&w=is&k=20&c=0MpL9pJJHSTbXl5on5wMjHM0vwYNfV0pMYHtprDwOl0="
 
          },
          "configuration":{
+            "description": "Example page",
             "rel":[
                "opener"
             ],
