@@ -1,10 +1,11 @@
 class AdDrawer{
-    constructor(configuration = './payload.json'){ // default path
+    constructor(configuration = './payload.json', addedClass = null){ // default path
        this.configuration = configuration;  
        this.ads = [];
        this.type = null;
+       this.addedClass = addedClass;
     }
-
+  
     draw(type, id) {
         return fetch(this.configuration)
           .then(res => res.json())
@@ -13,9 +14,9 @@ class AdDrawer{
             return this.getRandomAd(data, type, id);
           })
       }
-
+  
     setAd (ad, id){
-
+  
         if(!ad) return
     
         const foundItem = this.ads.banners.find(adv =>
@@ -24,36 +25,51 @@ class AdDrawer{
     
         const config = foundItem ? foundItem.configuration : null;
         const tags = foundItem ? foundItem.tags : null;
+        const link = foundItem ? foundItem.link : null;
     
         // Check if a class exists
         const imgContainer = document.querySelector(`#${id}`);
         if(!imgContainer) return 
     
-        const imgElement = document.createElement('img');
-    
-        const imgSizes = {
-            'leaderboard': { width: '728px', height: '90px' },
-            'large rectangle': { width: '336px', height: '289px' },
-            'medium rectangle': { width: '300px', height: '250px' },
-            'mobile banner': { width: '300px', height: '50px' },
-            'wide skyscraper': { width: '160px', height: '600px' }
-        };
-
-        const imgSize = imgSizes[this.type];
-        imgElement.style.width = imgSize.width;
-        imgElement.style.height = imgSize.height;
-        
-        
-        imgElement.src = ad;
-        imgElement.setAttribute('alt', "Advertisement");
-    
-        config.rel && imgElement.setAttribute('rel', config.rel.join(' '));
-        config.target && imgElement.setAttribute('target', config.target);
-        tags && imgElement.setAttribute('data-tags', tags.join(' '));
-    
-        imgContainer.appendChild(imgElement);
+        const linkElement = this.createLink(imgContainer, link, config);
+        this.createImage(linkElement, ad, tags, config);
     }
-
+  
+    createLink(container, link, config){
+        let linkElement = document.createElement('a');
+        config.target && linkElement.setAttribute('target', config.target);
+        config.rel && linkElement.setAttribute('rel', config.rel.join(' '));
+        link && linkElement.setAttribute('href', link);
+        container.appendChild(linkElement);
+        return linkElement;
+    }
+  
+    createImage(container, ad, tags, config){
+        let imageElement = document.createElement('img');
+  
+        const imgSizes = {
+          'leaderboard': { width: '728px', height: '90px' },
+          'large rectangle': { width: '336px', height: '289px' },
+          'medium rectangle': { width: '300px', height: '250px' },
+          'mobile banner': { width: '300px', height: '50px' },
+          'wide skyscraper': { width: '160px', height: '600px' }
+        };
+  
+        const imgSize = imgSizes[this.type];
+        imageElement.style.width = imgSize.width;
+        imageElement.style.height = imgSize.height;
+        this.addedClass && imageElement.classList.add(this.addedClass);
+        
+        
+        imageElement.src = ad;
+        config.description && imageElement.setAttribute('alt', config.description);
+  
+        tags && imageElement.setAttribute('data-tags', tags.join(' '));
+  
+        container.appendChild(imageElement);
+        return imageElement;
+    }
+  
     getRandomAd(data, type, id){
         const { banners } = data;
         const filteredAdsByDomain = this.filterAdsByDomain(banners, this.getCurrentDomain());
@@ -61,12 +77,12 @@ class AdDrawer{
         this.setAd(randomAd, id);
         return randomAd
     }
-
+  
     getCurrentDomain(){
         return window.location.hostname;
     }
     
-
+  
     // Function to check the current domain and filter data
         filterAdsByDomain(banners, currentDomain){
         return banners.filter( ads => {
@@ -74,7 +90,7 @@ class AdDrawer{
             return itemDomain !== currentDomain
         });
     }
-
+  
     // Function to return ads by type
     // For example, only mobile banners
     // If type is undefined, then the function will randomize after all ads
@@ -90,7 +106,7 @@ class AdDrawer{
         this.type = type;
         return this.getRandomAdURL(adType)      
     }
-
+  
     // Function to return single advertisement 
     // input: [Array(3), Array(3)] or ['https://example.com/example.png', "https://example.com/example.jpg"]
     // output: https://example.com/example.png
@@ -101,6 +117,7 @@ class AdDrawer{
         const randomIndex = Math.floor(Math.random() * allAdsURLs.length); 
         return allAdsURLs[randomIndex];
     }
-
-
-}
+  
+  
+  }
+  
