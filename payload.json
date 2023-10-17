@@ -1,68 +1,46 @@
 {
    "banners":[
-      {
-         "link":"https://examplepage.pro/",
-         "images":{
-            "wide skyscraper":"https://examplepage.pro/wide-cokolwiek.png",
-            "leaderboard":"https://examplepage.pro/leader-cokolwiek2.png",
-            "large rectangle":"https://examplepage.pro/large-cokolwiek.webp"
-         },
-         "configuration":{
-            "description": "Company fighting for fair verdicts",
-            "rel":[
-               "nofollow",
-               "noindex"
-            ],
-            "target":"_blank"
-            
-         },
-         "tags":[
-            "law",
-            "company"
-         ]
-      },
-      {
-         "link":"https://examplepage.pl/",
-         "images":{
-            "wide skyscraper":"https://pixabay.com/wide-cokolwiek.png",
-            "mobile banner":"https://images.examplepage.pl/mobile-cokolwiek.jpg",
-            "leaderboard":"https://pixabay.com/leader-cokolwiek.jpg"
-         },
-         "configuration":{
-            "description": "Real estate company from Poland",
-            "rel":[
-               "opener"
-            ],
-            "target":"_blank"
-         },
-         "tags":[
-            "law",
-            "company",
-            "property",
-            "real estate"
-         ]
-      },
-      {
-         "link":"https://examplepage.com/",
-         "images":{
-            "mobile banner":"https://examplepage.com/grafika.jpg",
-            "leaderboard": "https://examplepage.com/leader-grafika.png",
-            "wide skyscraper" : "https://media.istockphoto.com/id/1406114828/pl/zdj%C4%99cie/budynek-wie%C5%BCowca-mieszkanie-wie%C5%BCe-biurowe.jpg?s=2048x2048&w=is&k=20&c=0MpL9pJJHSTbXl5on5wMjHM0vwYNfV0pMYHtprDwOl0="
-
-         },
-         "configuration":{
-            "description": "Example page",
-            "rel":[
-               "opener"
-            ],
-            "target":"_self"
-         }
-      },
-      {
-         "link":"http://127.0.0.1:5500",
-         "images":{
-            "mobile banner":"https://pixabay.com/tree.jpg"
-         }
-      }
+       {
+          "link":"https://outrainer.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/outrainer.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/OUTRAINER_2023.10_medium_rectangle.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "System obsługi siłowni i klubu sportowego. Karnety, płatności, sprawdzanie obecności"
+          },
+          "tags":[
+             "sport"
+          ]
+       },
+       {
+          "link":"https://czarnalistanajemcow.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/czarnalistanajemcow.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/CZARNALISTANAJEMCOW_2023.10_medium-rectangle.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Krajowy rejestr nieuczciwych najemców"
+          },
+          "tags":[
+             "lokator", "najemca", "wynajem", "czarna-lista"
+          ]
+       },
+       {
+          "link":"https://czarnalistawynajmujacych.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/czarnalistawynajmujacych.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/CZARNALISTAWYNAJMUJACYCH_2023.10_medium-rectangle.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Krajowy rejestr nieuczciwych wynajmujących"
+          },
+          "tags":[
+             "landlord", "właściciel", "wynajem", "czarna-lista"
+          ]
+       }
    ]
 }
