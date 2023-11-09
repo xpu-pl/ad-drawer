@@ -1,3 +1,5 @@
+[![](https://data.jsdelivr.com/v1/package/gh/xpu-pl/ad-drawer/badge)](https://www.jsdelivr.com/package/gh/xpu-pl/ad-drawer)
+
 # PROGRAM TO DRAW ADS FROM A JSON FILE
 
 A program in vanilla Javascript that randomizes ads on a page by excluding ads from the page they are currently on. 
