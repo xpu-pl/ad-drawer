@@ -41,20 +41,6 @@
           "tags":[
              "landlord", "właściciel", "wynajem", "czarna-lista"
           ]
-       },
-       {
-          "link":"https://balonowadekoratornia.pl",
-          "images":{
-             "wide skyscraper":"https://xpu.pl/images/projects/BALONOWADEKORATORNIA_2023.11_wide-scyscraper.webp",
-             "medium rectangle":"https://xpu.pl/images/projects/BALONOWADEKORATORNIA_2023.11_medium-rectangle.webp"
-          },
-          "configuration":{
-             "target":"_blank",
-             "description": "Wrocław balonowe dekoracje, artystyczne ścianki balonowe"
-          },
-          "tags":[
-             "balony", "dekoracje", "Wrocław", "Jelcz"
-          ]
        }
    ]
 }
