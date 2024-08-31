@@ -11,7 +11,7 @@
              "description": "System obsługi siłowni i klubu sportowego. Karnety, płatności, sprawdzanie obecności"
           },
           "tags":[
-             "sport"
+             "sport", "outrainer", "appka-trenera-personalnego", "dziennik-treningów"
           ]
        },
        {
@@ -40,6 +40,20 @@
           },
           "tags":[
              "landlord", "właściciel", "wynajem", "czarna-lista"
+          ]
+       },
+       {
+          "link":"https://warsztat.turzawielka.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/warsztat_wide_skyscraper.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/warsztat_medium_rectangle.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Warsztat obróbki metali, serwis rowerowy - Turza Wielka, Działdowo"
+          },
+          "tags":[
+             "obróbka-metali", "wasiek", "serwis-rowerowy", "turza-wielka", "złota-rączka"
           ]
        }
    ]
