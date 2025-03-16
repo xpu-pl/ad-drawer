@@ -42,20 +42,6 @@
              "landlord", "właściciel", "wynajem", "czarna-lista"
           ]
        },
-      //  {
-      //     "link":"https://warsztat.turzawielka.pl",
-      //     "images":{
-      //        "wide skyscraper":"https://xpu.pl/images/projects/warsztat_wide_skyscraper.webp",
-      //        "medium rectangle":"https://xpu.pl/images/projects/warsztat_medium_rectangle.webp"
-      //     },
-      //     "configuration":{
-      //        "target":"_blank",
-      //        "description": "Warsztat obróbki metali, serwis rowerowy - Turza Wielka, Działdowo"
-      //     },
-      //     "tags":[
-      //        "obróbka-metali", "wasiek", "serwis-rowerowy", "turza-wielka", "złota-rączka"
-      //     ]
-      //  },
        {
           "link":"https://cashevidence.com",
           "images":{
