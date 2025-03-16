@@ -42,18 +42,32 @@
              "landlord", "właściciel", "wynajem", "czarna-lista"
           ]
        },
+      //  {
+      //     "link":"https://warsztat.turzawielka.pl",
+      //     "images":{
+      //        "wide skyscraper":"https://xpu.pl/images/projects/warsztat_wide_skyscraper.webp",
+      //        "medium rectangle":"https://xpu.pl/images/projects/warsztat_medium_rectangle.webp"
+      //     },
+      //     "configuration":{
+      //        "target":"_blank",
+      //        "description": "Warsztat obróbki metali, serwis rowerowy - Turza Wielka, Działdowo"
+      //     },
+      //     "tags":[
+      //        "obróbka-metali", "wasiek", "serwis-rowerowy", "turza-wielka", "złota-rączka"
+      //     ]
+      //  },
        {
-          "link":"https://warsztat.turzawielka.pl",
+          "link":"https://cashevidence.com",
           "images":{
-             "wide skyscraper":"https://xpu.pl/images/projects/warsztat_wide_skyscraper.webp",
-             "medium rectangle":"https://xpu.pl/images/projects/warsztat_medium_rectangle.webp"
+             "wide skyscraper":"https://xpu.pl/images/projects/ce_promo_160x600.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/ce_promo_300x250.webp"
           },
           "configuration":{
              "target":"_blank",
-             "description": "Warsztat obróbki metali, serwis rowerowy - Turza Wielka, Działdowo"
+             "description": "Ogłoszenia o poszukiwaniu informacji i nagrań z nagrodami pieniężnymi. Cash Evidence - prawda jest warta swojej ceny!"
           },
           "tags":[
-             "obróbka-metali", "wasiek", "serwis-rowerowy", "turza-wielka", "złota-rączka"
+             "poszukwianie-informacji", "nagrania", "nagrody-pieniężne", "cash-evidence", "ktokolwiek-widział-ktokolwiek-wie"
           ]
        }
    ]

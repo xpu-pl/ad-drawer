@@ -42,8 +42,8 @@ The draw function is used to add an ad. Specify the type and id of the item to b
 
 ## IMAGE SIZES
 
-"wide skyscraper": 
-"medium rectangle": 
+'medium rectangle': { width: '300px', height: '250px' },
+'wide skyscraper': { width: '160px', height: '600px' }
 
 ## TESTS 
 
