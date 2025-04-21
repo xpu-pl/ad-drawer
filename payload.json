@@ -45,15 +45,15 @@
        {
           "link":"https://cashevidence.com",
           "images":{
-             "wide skyscraper":"https://xpu.pl/images/projects/ce_160x600.webp",
-             "medium rectangle":"https://xpu.pl/images/projects/ce_300x250.webp"
+             "wide skyscraper":"https://xpu.pl/images/projects/ce_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/ce_mobile.webp"
           },
           "configuration":{
              "target":"_blank",
-             "description": "Rejestr przestępstw, wypadków i zaginięć. Opublikuj zgłoszenie i wyznacz opcjonalną nagrodę za informację. Albo prześlij użyteczne info i zgarnij nagrodę. Prawda jest warta swojej ceny!"
+             "description": "Rejestr przestępstw, wypadków i zaginięć. Opublikuj zgłoszenie, albo prześlij nagranie z foto lub nagranie z kamery samochodowej i zgarnij nagrodę. Prawda jest warta swojej ceny!"
           },
           "tags":[
-             "poszukwianie-informacji", "nagrania", "nagrody-pieniężne", "cash-evidence", "ktokolwiek-widział-ktokolwiek-wie"
+             "poszukiwanie-informacji", "nagrania", "nagrody-pieniężne", "cash-evidence", "ktokolwiek-widział-ktokolwiek-wie"
           ]
        }
    ]
