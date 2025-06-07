@@ -43,10 +43,10 @@
           ]
        },
        {
-          "link":"https://cashevidence.com",
+          "link":"https://znajdzinfo.pl",
           "images":{
-             "wide skyscraper":"https://xpu.pl/images/projects/ce_desktop.webp",
-             "medium rectangle":"https://xpu.pl/images/projects/ce_mobile.webp"
+             "wide skyscraper":"https://xpu.pl/images/projects/zi_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/zi_mobile.webp"
           },
           "configuration":{
              "target":"_blank",
