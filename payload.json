@@ -55,6 +55,20 @@
           "tags":[
              "poszukiwanie-informacji", "nagrania", "nagrody-pieniężne", "cash-evidence", "ktokolwiek-widział-ktokolwiek-wie"
           ]
+       },
+       {
+          "link":"https://lustroczynszowe.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/lc_desktop.png.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/lc_mobile.png.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Porównaj czynsze mieszkań w Polsce. Znajdź informacje o opłatach najmu, kosztach administracyjnych i funduszach remontowych dla różnych miast i ulic. Zoptymalizuj swój czynsz"
+          },
+          "tags":[
+             "czynsz", "fundusz-remontowy", "fundusz-administracyjny", "fundusz-zarządczy"
+          ]
        }
    ]
 }
