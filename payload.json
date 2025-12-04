@@ -69,6 +69,34 @@
           "tags":[
              "czynsz", "fundusz-remontowy", "fundusz-administracyjny", "fundusz-zarządczy"
           ]
+       },
+       {
+          "link":"https://bezproblemow.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/bezproblemow/bp_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/bezproblemow/bp_mobile.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Prawnik od nieruchomości. Pomoc prawna w zakupie i wynajmie nieruchomości. Spory z deweloperem i odszkodoawania za błędy w sztuce budowlanej. "
+          },
+          "tags":[
+             "mieszkanie", "prawnik", "nieruchomości", "deweloper"
+          ]
+       },
+       {
+          "link":"https://przeksztalcenia.pro",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/przeksztalcenia/pp_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/przeksztalcenia/pp_mobile.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Chroń i optymalizuj swój biznes: przekształć go w spółkę. Pomoc prawna i księgowa"
+          },
+          "tags":[
+             "optymalizacja", "biznes", "przekształcenie", "spółka-handlowa"
+          ]
        }
    ]
 }
