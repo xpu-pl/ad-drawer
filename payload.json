@@ -97,6 +97,20 @@
           "tags":[
              "optymalizacja", "biznes", "przekształcenie", "spółka-handlowa"
           ]
+       },
+       {
+          "link":"https://chatinfo.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/chatinfo_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/chatinfo_mobile.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Twórz chatboty AI, które uczą się z Twojej strony i dokumentów. Automatyzuj obsługę klienta 24/7 bez kodowania"
+          },
+          "tags":[
+             "chatbot", "biznes", "czatbot", "support"
+          ]
        }
    ]
 }
