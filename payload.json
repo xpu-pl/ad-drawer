@@ -111,6 +111,20 @@
           "tags":[
              "chatbot", "biznes", "czatbot", "support"
           ]
+       },
+       {
+          "link":"https://cenycpn.pl",
+          "images":{
+             "wide skyscraper":"https://xpu.pl/images/projects/cenycpn_desktop.webp",
+             "medium rectangle":"https://xpu.pl/images/projects/cenycpn_mobile.webp"
+          },
+          "configuration":{
+             "target":"_blank",
+             "description": "Czy paliwo jutro będzie tańsze? Maksymalne ceny paliwa w Polsce: Pb95, ON i Pb98 dziś i jutro. Oficjalne stawki z Monitora Polskiego, historia zmian i alerty."
+          },
+          "tags":[
+             "paliwo", "benzyna", "cenapb95", "koszt-paliwa"
+          ]
        }
    ]
 }
