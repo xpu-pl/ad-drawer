@@ -4,15 +4,27 @@ class AdDrawer{
        this.ads = [];
        this.type = null;
        this.addedClass = addedClass;
+       this.allowedTypes = {
+        'leaderboard': { width: 728, height: 90 },
+        'large rectangle': { width: 336, height: 280 },
+        'medium rectangle': { width: 300, height: 250 },
+        'mobile banner': { width: 300, height: 50 },
+        'wide skyscraper': { width: 160, height: 600 }
+       };
     }
   
     draw(type, id) {
+        if (this.ads && this.ads.banners) {
+          return Promise.resolve(this.getRandomAd(this.ads, type, id));
+        }
+
         return fetch(this.configuration)
           .then(res => res.json())
           .then(data => {
             this.ads = data;
             return this.getRandomAd(data, type, id);
           })
+          .catch(() => null);
       }
   
     setAd (ad, id){
@@ -27,42 +39,58 @@ class AdDrawer{
         const tags = foundItem ? foundItem.tags : null;
         const link = foundItem ? foundItem.link : null;
     
-        // Check if a class exists
         const imgContainer = document.querySelector(`#${id}`);
         if(!imgContainer) return 
     
+        imgContainer.innerHTML = '';
+        imgContainer.setAttribute('data-ad-drawer', 'true');
+
         const linkElement = this.createLink(imgContainer, link, config);
         this.createImage(linkElement, ad, tags, config);
     }
   
-    createLink(container, link, config){
+    createLink(container, link, config = {}){
+        if (!link) return container;
+
         let linkElement = document.createElement('a');
+
+        const blockedRelValues = new Set(['sponsored', 'nofollow', 'noreferrer']);
+        const relValues = (config.rel || [])
+          .filter(Boolean)
+          .map(value => String(value).toLowerCase())
+          .filter(value => !blockedRelValues.has(value));
+
         config.target && linkElement.setAttribute('target', config.target);
-        config.rel && linkElement.setAttribute('rel', config.rel.join(' '));
-        link && linkElement.setAttribute('href', link);
+        if (relValues.length > 0) {
+          linkElement.setAttribute('rel', relValues.join(' '));
+        }
+        linkElement.setAttribute('href', link);
+        linkElement.setAttribute('aria-label', config.description || 'Reklama sponsorowana');
+
         container.appendChild(linkElement);
         return linkElement;
     }
   
-    createImage(container, ad, tags, config){
+    createImage(container, ad, tags, config = {}){
         let imageElement = document.createElement('img');
   
-        const imgSizes = {
-          'leaderboard': { width: '728px', height: '90px' },
-          'large rectangle': { width: '336px', height: '289px' },
-          'medium rectangle': { width: '300px', height: '250px' },
-          'mobile banner': { width: '300px', height: '50px' },
-          'wide skyscraper': { width: '160px', height: '600px' }
-        };
-  
-        const imgSize = imgSizes[this.type];
-        imageElement.style.width = imgSize.width;
-        imageElement.style.height = imgSize.height;
+        const imgSize = this.allowedTypes[this.type];
+        if (imgSize) {
+          imageElement.width = imgSize.width;
+          imageElement.height = imgSize.height;
+          imageElement.style.width = `${imgSize.width}px`;
+          imageElement.style.height = `${imgSize.height}px`;
+        }
+
         this.addedClass && imageElement.classList.add(this.addedClass);
         
         
         imageElement.src = ad;
-        config.description && imageElement.setAttribute('alt', config.description);
+        imageElement.loading = 'lazy';
+        imageElement.decoding = 'async';
+        imageElement.setAttribute('fetchpriority', 'low');
+        imageElement.setAttribute('alt', config.description || 'Reklama sponsorowana');
+        imageElement.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   
         tags && imageElement.setAttribute('data-tags', tags.join(' '));
   
@@ -84,11 +112,23 @@ class AdDrawer{
     
   
     // Function to check the current domain and filter data
-        filterAdsByDomain(banners, currentDomain){
+    filterAdsByDomain(banners, currentDomain){
+        const normalizedCurrentDomain = this.normalizeHostname(currentDomain);
+
         return banners.filter( ads => {
-            let itemDomain = new URL(ads.link).hostname;
-            return itemDomain !== currentDomain
+            const itemDomain = this.normalizeHostname(ads.link);
+            return itemDomain && itemDomain !== normalizedCurrentDomain;
         });
+    }
+
+    normalizeHostname(value){
+        try {
+          const url = new URL(value);
+          return url.hostname.replace(/^www\./, '');
+        } catch {
+          if (typeof value !== 'string') return '';
+          return value.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
+        }
     }
   
     // Function to return ads by type
@@ -98,7 +138,7 @@ class AdDrawer{
     // {link: 'https://przeksztalcenia.pro/', images: {…}, configuration: {…}, tags: Array(2)}
     // output: https://majkesz.pl/leader-grafika.png
     filterAdsByType(filteredAds, type){
-        const allowedTypes = ["wide skyscraper", "leaderboard", "large rectangle", "medium rectangle", "mobile banner"];
+        const allowedTypes = Object.keys(this.allowedTypes);
         if(type === undefined || !allowedTypes.includes(type)) return 
         
         const adType = filteredAds.map(item => item.images[type]).filter(value => value !== undefined)

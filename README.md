@@ -40,6 +40,15 @@ The draw function is used to add an ad. Specify the type and id of the item to b
 
 >  adDrawer.draw("large rectangle","ad");
 
+## SEO / HTML output
+
+Without changing the public API, the rendered ad output now:
+
+- does not add `sponsored`, `nofollow` or `noreferrer` to ad links
+- adds `aria-label` on links and fallback `alt` on images
+- sets `width` and `height` attributes on images to reduce layout shift (CLS)
+- uses `loading="lazy"`, `decoding="async"` and `fetchpriority="low"` for non-critical ad images
+
 ## IMAGE SIZES
 
 'medium rectangle': { width: '300px', height: '250px' },
